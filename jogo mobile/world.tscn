@@ -1,0 +1,31 @@
+[gd_scene load_steps=5 format=3 uid="uid://dbn4oal4dbs24"]
+
+[ext_resource type="Texture2D" uid="uid://1sy8jeqh8ubm" path="res://assets/background.png" id="1_4oxcx"]
+[ext_resource type="PackedScene" uid="uid://dpj4pedqq2y04" path="res://box.tscn" id="2_qoeok"]
+[ext_resource type="PackedScene" uid="uid://bho1jsgg7v32x" path="res://player.tscn" id="3_2xroq"]
+[ext_resource type="PackedScene" uid="uid://bb17hgmon82th" path="res://ground.tscn" id="4_1a7gy"]
+
+[node name="World" type="Node2D"]
+
+[node name="Ground" parent="." instance=ExtResource("4_1a7gy")]
+position = Vector2(512, 636)
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("1_4oxcx")
+
+[node name="Box" parent="." instance=ExtResource("2_qoeok")]
+position = Vector2(907, 527)
+
+[node name="Box2" parent="." instance=ExtResource("2_qoeok")]
+position = Vector2(598, 536)
+
+[node name="Box3" parent="." instance=ExtResource("2_qoeok")]
+position = Vector2(907, 444)
+
+[node name="Box4" parent="." instance=ExtResource("2_qoeok")]
+position = Vector2(726, 534)
+
+[node name="Player" parent="." instance=ExtResource("3_2xroq")]
+position = Vector2(129, 287)
